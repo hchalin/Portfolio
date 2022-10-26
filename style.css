@@ -1,0 +1,271 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* End of CSS reset */
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f1f1;
+  color: #444;
+  font-family: "Oxygen", sans-serif;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+}
+
+.logo {
+  display: block;
+  margin: 2em 0 1em 2em;
+  letter-spacing: 0.2em;
+  font-size: 1.2em;
+  
+  width: fit-content;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  margin: 1em 0 0 2em;
+  justify-content: 4em;
+  text-decoration: none;
+}
+
+q {
+  
+  margin: 2em 1em 2em 1em;
+  text-shadow: 0 0 px #444;
+}
+
+#works {
+  text-decoration: none;
+  letter-spacing: 0.2em;
+  font-size: 0.9em;
+  
+  color: #444;
+  margin: 0 0 0 0.3em;
+}
+
+#about {
+  letter-spacing: 0.2em;
+  font-size: 0.9em;
+  font-family: "Oxygen", sans-serif;
+  text-decoration: none;
+  color: #444;
+  margin: 1em 0 0 0.3em;
+}
+
+#works:hover {
+  text-shadow: 0 0 0.5em #444;
+}
+#about:hover {
+  text-shadow: 0 0 0.5em #444;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+}
+#keyboard {
+  
+  width: 50%;
+  box-shadow: 0 0 15px rgb(31, 31, 31);
+}
+
+#snow {
+  width: 50%;
+  box-shadow: 0 0 15px rgb(31, 31, 31);
+  /* margin-top: 1.5em; */
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer {
+ 
+
+  margin-top: 3em;
+
+  background: linear-gradient(
+    0deg,
+    rgba(223, 222, 222, 1) 38%,
+    rgba(241, 241, 241, 1) 80%
+  );
+  
+}
+
+.link{
+  color: #444;
+  text-decoration: none;
+}
+.link:hover {
+  text-shadow: 0 0 0.5em #444;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: row;
+    width: 100vw;
+    padding-bottom: 1em;
+    justify-content: space-around;
+  }
+  .menu {
+
+    flex-direction: row;
+    
+
+  }
+  #works {
+    align-self: center;
+  }
+  #about {
+    align-self: center;
+    margin: 0;
+    margin-left: 1em;
+  }
+}
