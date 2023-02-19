@@ -1,13 +1,30 @@
 import React from "react";
 import { SocialIcon } from "react-social-icons";
 
+import { motion } from "framer-motion";
+
 type Props = {};
 
 function Header({}: Props) {
   return (
-    <header>
+    <header className="sticky top-0 flex items-start justify-between p-5 max-w-7xl mx-auto z-40 xl: center">
       {/* Left side  */}
-      <div className="flex flex-row items-center">
+      <motion.div
+        initial={{
+          x: -500,
+          opacity: 0,
+          scale: 0.5,
+        }}
+        animate={{
+          x: 0,
+          opacity: 1,
+          scale: 1
+        }}
+        transition={{
+          duration: 1.5
+        }}
+        className="flex flex-row items-center"
+      >
         {/* Social Icons */}
         <SocialIcon
           url="https://instagram.com/_____.hayden._____"
@@ -19,21 +36,29 @@ function Header({}: Props) {
           fgColor="grey"
           bgColor="transparent"
         />
-      </div>
+      </motion.div>
 
       {/* Right side */}
-      <div>
-        <SocialIcon
-          className="cursor-pointer"
-          network="email"
-          fgColor="grey"
-          bgColor="transparent"
-        />
-        <p className="lowercase">
+      <motion.div
+      initial={{
+        x:500,
+        opacity: 0,
+        scale: 0.5
+      }}
+      animate={{
+        x: 0,
+        opacity: 1,
+        scale: 1
+      }}
+      transition={{
+        duration: 1.5
+      }}
+      className="flex flex-row items-center text-gray-300 cursor-pointer">
+        <SocialIcon network="email" fgColor="gray" bgColor="transparent" />
+        <p className="uppercase hidden lg:inline-block text-sm text-gray-400">
           GET IN TOUCH
         </p>
-      </div>
-
+      </motion.div>
     </header>
   );
 }
