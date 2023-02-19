@@ -1,8 +1,6 @@
 import React from "react";
 import { SocialIcon } from "react-social-icons";
 
-
-
 type Props = {};
 
 function Header({}: Props) {
@@ -31,8 +29,11 @@ function Header({}: Props) {
           fgColor="grey"
           bgColor="transparent"
         />
-        <p className="uppercase hidden ">Get in touch</p>
+        <p className="lowercase">
+          GET IN TOUCH
+        </p>
       </div>
+
     </header>
   );
 }
