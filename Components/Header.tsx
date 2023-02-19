@@ -51,7 +51,7 @@ function Header({}: Props) {
         scale: 1
       }}
       transition={{
-        duration: 1.5
+        duration: 2
       }}
       className="flex flex-row items-center text-gray-300 cursor-pointer">
         <SocialIcon network="email" fgColor="gray" bgColor="transparent" />
