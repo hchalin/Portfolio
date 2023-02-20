@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <>
+    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-manditory overflow-scroll z-0">
       <Head>
         <title>Hayden Chalin</title>
       </Head>
@@ -14,7 +14,7 @@ export default function Home() {
       {/* Header  */}
       <Header />
 
-      <section id="hero">
+      <section id="hero" className="snap-center">
         <Hero />
       </section>
 
@@ -27,6 +27,6 @@ export default function Home() {
       {/* Projects */}
 
       {/* Contact Me */}
-    </>
+    </div>
   );
 }

@@ -53,9 +53,12 @@ function Header({}: Props) {
       transition={{
         duration: 2
       }}
-      className="flex flex-row items-center text-gray-300 cursor-pointer">
-        <SocialIcon network="email" fgColor="gray" bgColor="transparent" />
-        <p className="uppercase hidden lg:inline-block text-sm text-gray-400">
+      className="flex flex-row items-center  text-gray-300 cursor-pointer">
+        <SocialIcon
+         network="email"
+          fgColor="gray"
+           bgColor="transparent" />
+        <p className="uppercase hidden lg:inline-block text-sm  text-grey-400">
           GET IN TOUCH
         </p>
       </motion.div>
