@@ -3,7 +3,7 @@ import Hero from "@/Components/Hero";
 import Head from "next/head";
 import Image from "next/image";
 import About from "@/Components/About";
-
+import WorkExperience from "@/Components/WorkExperience";
 
 export default function Home() {
   return (
@@ -20,10 +20,13 @@ export default function Home() {
       </section>
 
       {/* About */}
-      <section id="about" className="snap-center">
+      <section id="about" className="snap-center scroll-smooth">
         <About />
       </section>
       {/* Experience */}
+      <section id='experience' className="snap-center scroll-smooth" >
+        <WorkExperience />
+      </section>
 
       {/* Skills */}
 
