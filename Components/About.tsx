@@ -11,7 +11,7 @@ function About({}: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="flex flex-col relative h-screen text-center md:flex-row md:text-left max-w-7xl px-10 justify-evenly mx-auto items-center"
+      className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center"
     >
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         About
@@ -29,12 +29,13 @@ function About({}: Props) {
         }}
         // viewport={{ once: true }} // it will only slide into view once
         transition={{ duration: 1.2 }}
+        className="-mb-20 lg:mb-0 rounded-full md:rounded-lg flex-shrink-0 w-56 h-56 object-cover md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]"
       >
         <Image
           src={Headshot}
           // Object-cover keeps the img from distorting if its large
           // the sizing starts with 'small(mobile) and works it way up to xl scree sizes'
-          className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[400px] xl:h-[500px]"
+          className=" rounded-lg "
         />
       </motion.div>
       {/* no spaces btw md: and px  */}
