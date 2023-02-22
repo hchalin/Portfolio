@@ -27,6 +27,11 @@ function Header({}: Props) {
       >
         {/* Social Icons */}
         <SocialIcon
+          url="https://github.com/hchalin"
+          fgColor="grey"
+          bgColor="transparent"
+        />
+        <SocialIcon
           url="https://instagram.com/_____.hayden._____"
           fgColor="grey"
           bgColor="transparent"

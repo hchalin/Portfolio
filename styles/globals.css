@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* inject custom CSS into components layer imported from tailwind*/
+@layer components {
+  .heroBtn {
+    /* @apply allows you to write tailwindcss */
+    @apply px-6 py-2 border border-[#242424] rounded-full uppercase text-xs tracking-widest text-gray-500 transition-all hover:border-[#474790]/40 hover:text-[#474790]/40;
+  }
+}

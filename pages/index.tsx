@@ -2,6 +2,7 @@ import Header from "@/Components/Header";
 import Hero from "@/Components/Hero";
 import Head from "next/head";
 import Image from "next/image";
+import About from "@/Components/About";
 
 
 export default function Home() {
@@ -13,13 +14,15 @@ export default function Home() {
 
       {/* Header  */}
       <Header />
-
-      <section id="hero" className="snap-center">
+      {/* snap-...(start, center, end) sets 'snap anchor points' */}
+      <section id="hero" className="snap-start">
         <Hero />
       </section>
 
       {/* About */}
-
+      <section id="about" className="snap-center">
+        <About />
+      </section>
       {/* Experience */}
 
       {/* Skills */}
