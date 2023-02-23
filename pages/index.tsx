@@ -15,7 +15,7 @@ export default function Home() {
       {/* Header  */}
       <Header />
       {/* snap-...(start, center, end) sets 'snap anchor points' */}
-      <section id="hero" className="snap-start">
+      <section id="hero" className="snap-start scoll-smooth">
         <Hero />
       </section>
 

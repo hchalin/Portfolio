@@ -9,7 +9,7 @@ const nextConfig = {
     return config;
   },
   images: {
-    //this is being use for the fullstack logo
+    //this is being use for the fullstack logo, import the pages for images
     domains: ['scontent-atl3-2.xx.fbcdn.net', 'img.icons8.com'],
   },
 }
