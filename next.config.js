@@ -4,14 +4,19 @@ const nextConfig = {
   webpack: (config) => {
     config.module.rules.push({
       test: /\.svg$/,
-      use: ['@svgr/webpack'],
+      use: ["@svgr/webpack"],
     });
     return config;
   },
   images: {
     //this is being use for the fullstack logo, import the pages for images
-    domains: ['scontent-atl3-2.xx.fbcdn.net', 'img.icons8.com'],
+    domains: [
+      "scontent-atl3-2.xx.fbcdn.net",
+      "img.icons8.com",
+      "cdn2.iconfinder.com",
+      "cdn.iconscout.com",
+    ],
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

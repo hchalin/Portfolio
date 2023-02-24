@@ -36,15 +36,15 @@ function ExperienceCard({}: Props) {
           width={100}
           height={100}
           alt=""
-          layout="responsive"
+
           className="rounded-full"
         />
       </motion.div>
       {/* ===== END OF IMAGE */}
 
       {/* DETAILS */}
-      <div className="px-0 md:p-10">
-        <h4 className="text-4xl font-light">FullStack Developer</h4>
+      <div className="px- md:p-10">
+        <h4 className="text-4xl font-light ">FullStack Developer</h4>
         <p className="font-bold text-2xl mt-1">*Company Here*</p>
         <div className="flex space-x-2 my-2">
           {/* tech stack */}
