@@ -29,16 +29,19 @@ function Header({}: Props) {
         <SocialIcon
           url="https://github.com/hchalin"
           fgColor="grey"
+          target="_blank" //opens in new tab
           bgColor="transparent"
         />
         <SocialIcon
           url="https://instagram.com/_____.hayden._____"
           fgColor="grey"
+          target="_blank" //opens in new tab
           bgColor="transparent"
         />
         <SocialIcon
           url="https://linkedin.com/in/haydenchalin"
           fgColor="grey"
+          target="_blank" //opens in new tab
           bgColor="transparent"
         />
       </motion.div>

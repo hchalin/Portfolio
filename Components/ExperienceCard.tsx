@@ -12,12 +12,13 @@ type Props = {};
 
 function ExperienceCard({}: Props) {
   return (
-    <article className="flex flex-col rounded-lg items-center space-y-7
+    <article
+      className="flex flex-col rounded-lg items-center space-y-7
     flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center
     bg-[#292929] p-10 opacity-40 hover:opacity-100 cursor-pointer
     transition-opacity duration-300 overflow-hidden
-
-    ">
+    "
+    >
       <motion.div className="w-32 h-32 ml-5 xl:w-[200px] xl:h-[200px] rounded-full overflow-hidden">
         <Image
           src={ImgURLs.fullstack}
