@@ -5,6 +5,7 @@ import Image from "next/image";
 import About from "@/Components/About";
 import WorkExperience from "@/Components/WorkExperience";
 import Skills from "@/Components/Skills";
+import Projects from "@/Components/Projects";
 
 export default function Home() {
   return (
@@ -35,6 +36,9 @@ export default function Home() {
       </section>
 
       {/* Projects */}
+      <section id="projects" className="snap-start scroll-smooth">
+        <Projects />
+      </section>
 
       {/* Contact Me */}
     </div>
