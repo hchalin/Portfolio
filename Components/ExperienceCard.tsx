@@ -15,11 +15,21 @@ function ExperienceCard({}: Props) {
   return (
     <article
       className="flex flex-col rounded-lg items-center space-y-7
-    flex-shrink-0 w-[500px] md:w-[600px] md:max-h-[700px] xl:w-[900px] xl:max-h-[700px]  snap-center
+    flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center
     bg-[#292929] p-10 opacity-40 hover:opacity-100 cursor-pointer
     transition-opacity duration-300 overflow-hidden"
     >
-      <motion.div className="w-32 h-32 ml-5 xl:w-[200px] xl:h-[200px] rounded-full object-cover overflow-hidden ">
+      {/* IMAGE */}
+      <motion.div
+        className="w-32 h-32 ml-5 xl:w-[200px] xl:h-[200px] object-cover object-center "
+        initial={{
+          y: -100,
+          opacity: 0,
+        }}
+        transition={{ duration: 1.2 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+      >
         {/* Company Logo */}
         <Image
           src={ImgURLs.fullstack}
@@ -27,13 +37,17 @@ function ExperienceCard({}: Props) {
           height={100}
           alt=""
           layout="responsive"
+          className="rounded-full"
         />
       </motion.div>
+      {/* ===== END OF IMAGE */}
 
+      {/* DETAILS */}
       <div className="px-0 md:p-10">
         <h4 className="text-4xl font-light">FullStack Developer</h4>
-        <p className="font-bold text-2xl mt-1">*Experience Here*</p>
+        <p className="font-bold text-2xl mt-1">*Company Here*</p>
         <div className="flex space-x-2 my-2">
+          {/* tech stack */}
           <Image
             src={ImgURLs.jslogo}
             width={100}
@@ -71,11 +85,10 @@ function ExperienceCard({}: Props) {
           />
         </div>
         <p className="uppercase py-5 text-gray-300">Started... Ended...</p>
-
-        <ul className="list-disc space-y-4 text-lg">
+          {/* to make ui scrollable. set a height and set 'scrollable' */}
+        <ul className="list-disc space-y-4 text-lg ">
           <li>Summary Points</li>
-          <li>Summary Points</li>
-          <li>Summary Points</li>
+          <li>Summary Pointsa</li>
           <li>Summary Points</li>
           <li>Summary Points</li>
         </ul>
