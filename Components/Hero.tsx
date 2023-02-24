@@ -27,6 +27,7 @@ function Hero({}: Props) {
         src={Headshot}
         // Object-cover keeps the img from distorting if its large
         className="relative rounded-full h-32 w-32 mx-auto object-cover"
+        alt=""
       />
       <div className="z-20">
         <h2 className="text-small uppercase text-gray-500 pb-2 tracking-[15px]">

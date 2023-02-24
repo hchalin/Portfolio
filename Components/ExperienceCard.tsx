@@ -1,3 +1,4 @@
+// /* eslint-disable */
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -14,51 +15,57 @@ function ExperienceCard({}: Props) {
   return (
     <article
       className="flex flex-col rounded-lg items-center space-y-7
-    flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center
+    flex-shrink-0 w-[500px] md:w-[600px] md:max-h-[700px] xl:w-[900px] xl:max-h-[700px]  snap-center
     bg-[#292929] p-10 opacity-40 hover:opacity-100 cursor-pointer
-    transition-opacity duration-300 overflow-hidden
-    "
+    transition-opacity duration-300 overflow-hidden"
     >
-      <motion.div className="w-32 h-32 ml-5 xl:w-[200px] xl:h-[200px] rounded-full overflow-hidden">
+      <motion.div className="w-32 h-32 ml-5 xl:w-[200px] xl:h-[200px] rounded-full object-cover overflow-hidden ">
+        {/* Company Logo */}
         <Image
           src={ImgURLs.fullstack}
           width={100}
           height={100}
+          alt=""
           layout="responsive"
         />
       </motion.div>
 
       <div className="px-0 md:p-10">
         <h4 className="text-4xl font-light">FullStack Developer</h4>
-        <p className="font-bold text-2xl mt-1">FULLSTACK ACADEMY</p>
+        <p className="font-bold text-2xl mt-1">*Experience Here*</p>
         <div className="flex space-x-2 my-2">
           <Image
             src={ImgURLs.jslogo}
             width={100}
             height={100}
+            alt=""
             className="w-10 h-10 rounded-full"
           />
           <Image
             src={ImgURLs.jslogo}
             width={100}
             height={100}
+            alt=""
             className="w-10 h-10 rounded-full"
           />
           <Image
             src={ImgURLs.jslogo}
             width={100}
+            alt=""
             height={100}
             className="w-10 h-10 rounded-full"
           />
           <Image
             src={ImgURLs.jslogo}
             width={100}
+            alt=""
             height={100}
             className="w-10 h-10 rounded-full"
           />
           <Image
             src={ImgURLs.jslogo}
             width={100}
+            alt=""
             height={100}
             className="w-10 h-10 rounded-full"
           />
