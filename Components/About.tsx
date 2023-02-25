@@ -42,7 +42,7 @@ function About({}: Props) {
       </motion.div>
 
       {/* no spaces btw md: and px  */}
-      <div className="space-y-10 px-0 mt-40 md:px-10 h-[450px]   overflow-scroll">
+      <div className="space-y-10 px-0 mt-40 md:px-10">
         <h4 className="text-4xl font-simibold">
           Here is a{" "}
           <span className="underline decoration-[#474790]/50">little</span>{" "}
@@ -56,7 +56,7 @@ function About({}: Props) {
             opacity: 1,
           }}
           transition={{ duration: 1.2 }}
-          className="text-base"
+          className="text-base  h-[430px]  overflow-scroll"
         >
           My name is Hayden Chalin and I am a Full Stack Software Engineer with
           a passion for using technology to solve real-world problems.
