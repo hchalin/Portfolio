@@ -17,11 +17,11 @@ function WorkExperience({}: Props) {
       </h3>
 
       <div className="flex w-full space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory">
-        {/* Experience Card */}
+        {/* Experience Cards */}
         <ExperienceCard />
         <ExperienceCard />
-        <ExperienceCard />
-        <ExperienceCard />
+        {/* <ExperienceCard /> */}
+        {/* <ExperienceCard /> */}
       </div>
     </motion.div>
   );

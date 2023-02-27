@@ -1,15 +1,15 @@
 import React from "react";
 import Image from "next/image";
 import { v4 as uuidv4 } from "uuid";
-import { SocialIcon } from "react-social-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+
+
+import ProjectCard from "./ProjectCard";
 
 type Props = {};
 
 function Projects({}: Props) {
   // fetch the projects from sanity
-  const projects = [1, 2, 3, 4];
+  const projects = [1, 2, 3];
   const uniqueKey = uuidv4();
 
   return (
@@ -23,15 +23,9 @@ function Projects({}: Props) {
 
       {/*  */}
       <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20">
-        {projects.map((project) => (
-          <div key={uniqueKey}>
-             <SocialIcon
-          url="https://github.com/hchalin/react-weather-app"
-          fgColor="grey"
-          target="_blank" //opens in new tab
-          bgColor="transparent"
-        />
-          </div>
+        {projects.map((project, i) => (
+        //  project card
+        <ProjectCard index={i}  key={uniqueKey}/>
         ))}
       </div>
     </div>
