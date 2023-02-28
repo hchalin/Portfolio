@@ -4,9 +4,11 @@ type Props = {};
 
 function ProjectCard({ index }: Props) {
   return (
-    <article
-    >
-      <div className="w-screen md:w-[700px] m-10 flex-shrink-0 snap-center snap-mandatory flext flex-col space-y-5 h-[600px] bg-[#292929] p-20 m-10">
+    <article>
+      <div
+        className="w-screen md:w-[700px] m-10 flex-shrink-0 snap-center
+      snap-mandatory flext flex-col space-y-5 h-[600px] bg-[#292929] p-20"
+      >
         <SocialIcon
           url="https://github.com/hchalin/react-weather-app"
           fgColor="grey"
