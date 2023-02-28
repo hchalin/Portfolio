@@ -1,6 +1,8 @@
 import React from "react";
 import { SocialIcon } from "react-social-icons";
-type Props = {};
+type Props = {
+  index: number
+};
 
 function ProjectCard({ index }: Props) {
   return (
