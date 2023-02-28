@@ -33,11 +33,11 @@ function Projects({}: Props) {
 
       {/* Card Container */}
       <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20" >
-        {projects.map((project, i) => (
+        {projects.map((project, index) => (
           //  project card
           <div key={uniqueKey}
           >
-            <ProjectCard index={i}  />
+            <ProjectCard index={index}  />
           </div>
         ))}
       </div>

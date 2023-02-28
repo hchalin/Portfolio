@@ -6,6 +6,7 @@ import About from "@/Components/About";
 import WorkExperience from "@/Components/WorkExperience";
 import Skills from "@/Components/Skills";
 import Projects from "@/Components/Projects";
+import ContactMe from "@/Components/ContactMe";
 
 export default function Home() {
   return (
@@ -42,6 +43,9 @@ export default function Home() {
       </section>
 
       {/* Contact Me */}
+      <section id="projects" className="snap-start scroll-smooth">
+        <ContactMe />
+      </section>
     </div>
   );
 }

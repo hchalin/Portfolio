@@ -1,0 +1,51 @@
+import React from "react";
+import {PhoneIcon, MapPinIcon, EnvelopeIcon} from '@heroicons/react/24/solid'
+
+type Props = {};
+
+function ContactMe({}: Props) {
+  return (
+    <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
+      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl ">
+        Contact Me
+      </h3>
+
+      <div className="flex flex-col space-y-10">
+        <h4 className="text-4xl font-semibold text-center">
+          I&apos;m who you&apos;re looking for. <span>Lets talk.</span>
+        </h4>
+
+        <div className="flex flex-col space-y-5">
+          <div className="flex items-center space-x-5 justify-center">
+            <PhoneIcon className="text-[#474790] h-7 w-7 animate-pulse"/>
+            <p className="text-2xl">(704) 813-4119</p>
+          </div>
+
+          <div className="flex items-center space-x-5 justify-center">
+            <MapPinIcon className="text-[#474790] h-7 w-7 animate-pulse"/>
+            <p className="text-2xl">Oregon</p>
+          </div>
+
+          <div className="flex items-center space-x-5 justify-center">
+            <EnvelopeIcon className="text-[#474790] h-7 w-7 animate-pulse"/>
+            <p className="text-2xl">hchalin98@gmail.com</p>
+          </div>
+        </div>
+
+        <form className="flex flex-col space-y-2 w-fit mx-auto" >
+          <div className="space-x-2">
+            <input className="contact-input" type='text'/>
+            <input className="contact-input" type='text'/>
+          </div>
+
+        <input className="contact-input" type="text" />
+        <textarea className="contact-input" />
+        <button className="bg-[#474790] py-5 px-10 rounded-md text-black font-bold text-lg hover:bg-[#565690] transition-bg duration-700">Submit</button>
+
+        </form>
+      </div>
+    </div>
+  );
+}
+
+export default ContactMe;

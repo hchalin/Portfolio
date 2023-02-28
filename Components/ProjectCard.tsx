@@ -6,19 +6,27 @@ function ProjectCard({ index }: Props) {
   return (
     <article>
       <div
-        className="w-screen md:w-[700px] m-10 flex-shrink-0 snap-center
-      snap-mandatory flext flex-col space-y-5 h-[500px] xl:h-[500px] bg-[#292929] opacity-40 hover:opacity-100 transition-opacity duration-300  p-20 rounded-xl"
+        className="w-screen md:w-[900px] m-10 flex-shrink-0 snap-center
+      overflow-x-scroll snap-mandatory flex flex-col space-y-5 h-[500px] xl:h-[500px] bg-[#292929] opacity-40 hover:opacity-100 transition-opacity duration-300  p-20 rounded-xl"
       >
         <SocialIcon
           url="https://github.com/hchalin/react-weather-app"
           fgColor="grey"
           target="_blank" //opens in new tab
           bgColor="transparent"
-          className="cursor-pointer "
+          // react social icon will use inline styles
+          style={{ height: 100, width: 100 }}
+          className="cursor-pointer mx-auto "
         />
 
-        <div>
-          <h4>Case {index + 1} of 3: React weather App</h4>
+        <div className="space-y-10 px-0 md:px-10 max-1-6xl">
+          <h4 className="text-4xl font-semibold text-center">
+            <span className="underline decoration-[#474790]">
+              Case {index + 1} of 3:
+            </span>{" "}
+            React weather App
+          </h4>
+          <p className="text-large text-center md:text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex sapiente nobis esse dignissimos quasi et nesciunt corrupti explicabo ducimus? Eius officiis esse natus provident aperiam debitis, voluptatem mollitia vitae saepe.</p>
         </div>
       </div>
     </article>
