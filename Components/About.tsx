@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy } from "react";
 import Headshot from "../imgs/blkwhtportrait.jpg";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -30,7 +30,7 @@ function About({}: Props) {
         }}
         viewport={{ once: true }} // it will only slide into view once
         transition={{ duration: 1.2 }}
-        className="-mb-20 lg:mb-0 rounded-full md:rounded-lg flex-shrink-0 object-cover  mt-40 "
+        className="-mb-20 lg:mb-0 rounded-full md:rounded-lg flex-shrink-0 object-cover mt-40 "
       >
         <Image
           src={Headshot}

@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import { v4 as uuidv4 } from "uuid";
 
-
 import ProjectCard from "./ProjectCard";
 
 type Props = {};
@@ -21,11 +20,15 @@ function Projects({}: Props) {
       {/* This is the background line... playing around with tailwinds 'skew' */}
       <div className="w-full absolute top-[30%] bg-[#474790]/10 left-0 h-[500px] skew-y-12 "></div>
 
-      {/*  */}
-      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20">
+      {/* Card Container */}
+      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20" >
         {projects.map((project, i) => (
-        //  project card
-        <ProjectCard index={i}  key={uniqueKey}/>
+          //  project card
+          <div key={uniqueKey}
+          className=""
+          >
+            <ProjectCard index={i}  />
+          </div>
         ))}
       </div>
     </div>
