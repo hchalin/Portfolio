@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import { useForm, SubmitHandler } from "react-hook-form";
 
@@ -13,6 +13,8 @@ type Inputs = {
 
 //custom type hooks
 function ContactMe({}: Props) {
+  const [autoFill, setAutoFill] = useState('Hello, message me')
+
   const { register, handleSubmit } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (formData) => console.log(formData);
 

@@ -36,7 +36,7 @@ function About({}: Props) {
           src={Headshot}
           // Object-cover keeps the img from distorting if its large
           // the sizing starts with 'small(mobile) and works it way up to xl scree sizes'
-          className=" rounded-full -mb-20 lg:mb-0 md:rounded-lg  w-36 h-36 md:w-[250px] md:h-[350px] object-cover  xl:w-[500px] xl:h-[600px]  "
+          className="  rounded-full -mb-20 lg:mb-0 md:rounded-lg  w-36 h-36 md:w-[250px] md:h-[350px] object-cover  xl:w-[500px] xl:h-[600px]  "
           alt=""
         />
       </motion.div>
