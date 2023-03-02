@@ -10,7 +10,7 @@ import ContactMe from "@/Components/ContactMe";
 
 export default function Home() {
   return (
-    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-manditory overflow-scroll z-0">
+    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-manditory overflow-y-scroll overflow-x-hidden z-0 ">
       <Head>
         <title>Hayden Chalin</title>
         <link rel="icon" href="/favicon.png" type="image/png"/>
