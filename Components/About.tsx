@@ -69,13 +69,13 @@ function About({}: Props) {
           me throughout my career.
           <br />
           <br />
-          After completing my service, I attended Fullstack Academy's intensive
+          After completing my service, I attended Fullstack Academy&apos;s intensive
           coding bootcamp, where I honed my technical skills in Node.js,
           React/Redux, Git, and Express. Since then, I have worked on a variety
           of web development projects, ranging from e-commerce platforms to real
           estate management systems. What motivates me as a Full Stack Software
           Engineer is the opportunity to create meaningful solutions that make a
-          difference in people's lives.
+          difference in people&apos;s lives.
           <br />
           <br />
           I am passionate about using my skills and expertise to develop
