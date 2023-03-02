@@ -32,7 +32,7 @@ function Projects({}: Props) {
       <div className="w-full absolute top-[30%] bg-[#474790]/20 left-0 h-[500px] skew-y-12 "></div>
 
       {/* Card Container */}
-      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20" >
+      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#474790]/80 scrollbar-thin" >
         {projects.map((project, index) => (
           //  project card
           <div key={uniqueKey}

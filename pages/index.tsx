@@ -10,10 +10,10 @@ import ContactMe from "@/Components/ContactMe";
 
 export default function Home() {
   return (
-    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-manditory overflow-y-scroll overflow-x-hidden z-0 ">
+    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-manditory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#474790]/80">
       <Head>
         <title>Hayden Chalin</title>
-        <link rel="icon" href="/favicon.png" type="image/png"/>
+        <link rel="icon" href="/favicon.png" type="image/png" />
       </Head>
 
       {/* Header  */}
@@ -28,13 +28,13 @@ export default function Home() {
         <About />
       </section>
       {/* Experience */}
-      <section id='experience' className="snap-center scroll-smooth" >
+      <section id="experience" className="snap-center scroll-smooth">
         <WorkExperience />
       </section>
 
       {/* Skills */}
       <section id="skills" className="snap-start scroll-smooth">
-          <Skills />
+        <Skills />
       </section>
 
       {/* Projects */}
@@ -43,7 +43,7 @@ export default function Home() {
       </section>
 
       {/* Contact Me */}
-      <section id="projects" className="snap-start scroll-smooth">
+      <section id="contact" className="snap-start scroll-smooth">
         <ContactMe />
       </section>
     </div>
