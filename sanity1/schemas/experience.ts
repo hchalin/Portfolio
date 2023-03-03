@@ -47,8 +47,8 @@ export default defineType({
       of: [{type: 'reference', to: {type: 'skill'}}],
     },
     {
-      name: 'summary',
-      title: 'Summary',
+      name: 'summaryPoints',
+      title: 'SummaryPoints',
       type: 'array',
       // refers to an array of string types
       of: [{type: 'string'}],
