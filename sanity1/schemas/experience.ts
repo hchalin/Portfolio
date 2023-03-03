@@ -34,7 +34,11 @@ export default defineType({
       title: 'EndDate',
       type: 'string',
     },
-
+    {
+      name: 'isCurrentlyWorkingHere',
+      title: 'IsCurrentlyWorkingHere',
+      type: 'boolean',
+    },
     {
       name: 'technology',
       title: 'Technology',
