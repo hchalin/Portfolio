@@ -7,8 +7,13 @@ import WorkExperience from "@/Components/WorkExperience";
 import Skills from "@/Components/Skills";
 import Projects from "@/Components/Projects";
 import ContactMe from "@/Components/ContactMe";
+import getSocials from "./api/getSocials";
 
 export default function Home() {
+
+  console.log(getSocials())
+
+
   return (
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-manditory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#474790]/80">
       <Head>
