@@ -1,0 +1,10 @@
+This api routes folder is used as 'endpoints'.  This is the same as using
+express to call the data base:
+ex:
+router.get()
+router.post()
+etc...
+
+Except here, we are using sanity which utilizes its 'groq' querys.
+
+

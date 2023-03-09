@@ -17,6 +17,7 @@ console.log (config)
 
 export const sanityClient = createClient(config);
 
+//This will turn images into sanity urls for photos
 export const urlFor = (source: any )=> {
   createImageUrlBuilder(config).image(source)
 }

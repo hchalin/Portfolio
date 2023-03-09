@@ -8,10 +8,27 @@ import Skills from "@/Components/Skills";
 import Projects from "@/Components/Projects";
 import ContactMe from "@/Components/ContactMe";
 import getSocials from "./api/getSocials";
+import Link from "next/link";
+import Headshot from '../imgs/blkwhtportrait.jpg'
+import { GetStaticProps } from "next";
+import { Experience, PageInfo, Project, Skill, Social } from "@/typings";
+import { fetchPageInfo } from "@/utils/fetchPageInfo";
+import { fetchExperience } from "@/utils/fetchExperience";
+import { fetchSkills } from "@/utils/fetchSkills";
+import { fetchSocials } from "@/utils/fetchSocials";
+import { fetchProjects } from "@/utils/fetchProjects";
 
-export default function Home() {
+type Props = {
+  pageInfo: PageInfo;
+  experience: Experience[];
+  skills: Skill[];
+  projects: Project[];
+  socials: Social[]
+}
 
-  console.log(getSocials())
+ export default function Home({pageInfo, experience,skills,projects,socials}: Props) {
+
+  console.log(pageInfo)
 
 
   return (
@@ -51,6 +68,37 @@ export default function Home() {
       <section id="contact" className="snap-start scroll-smooth">
         <ContactMe />
       </section>
+      <Link href='#hero'>
+        <footer className="sticky bottom-5 w-full cursor-pointer">
+          <div className="flex items-center justify-center">
+          <Image
+        src={Headshot}
+        // Object-cover keeps the img from distorting if its large
+        className="relative rounded-full h-10 w-10 mx-auto object-cover"
+        alt=""
+      />
+          </div>
+        </footer>
+      </Link>
     </div>
   );
+}
+
+export const getStaticProps:GetStaticProps<Props>  = async (params:type) => {
+  const pageInfo: PageInfo = await fetchPageInfo()
+  const experience: Experience[] = await fetchExperience()
+  const skills: Skill[] = await fetchSkills()
+  const socials: Social[] = await fetchSocials()
+  const projects: Project[] = await fetchProjects()
+
+
+  return {
+    props: {
+      pageInfo,
+      experience,
+      skills,
+      socials,
+      projects
+    }
+  }
 }
