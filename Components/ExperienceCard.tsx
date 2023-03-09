@@ -2,6 +2,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Experience } from "@/typings";
+import { urlFor } from "@/sanity";
 
 const ImgURLs = {
   fullstack:
@@ -9,9 +11,12 @@ const ImgURLs = {
   jslogo: "https://img.icons8.com/arcade/512/javascript.png",
 };
 
-type Props = {};
+type Props = {
+  experience: Experience[];
+};
 
-function ExperienceCard({}: Props) {
+function ExperienceCard({experience}: Props) {
+  console.log(experience)
   return (
     <article
       className="flex flex-col rounded-lg items-center space-y-7
@@ -32,7 +37,7 @@ function ExperienceCard({}: Props) {
       >
         {/* Company Logo */}
         <Image
-          src={ImgURLs.fullstack}
+          src={urlFor(experience?.companyImg).url()}
           width={100}
           height={100}
           alt=""
@@ -44,7 +49,7 @@ function ExperienceCard({}: Props) {
 
       {/* DETAILS */}
       <div className="px- md:p-10">
-        <h4 className="text-4xl font-light ">FullStack Developer</h4>
+        <h4 className="text-4xl font-light ">{experience.role}</h4>
         <p className="font-bold text-2xl mt-1">*Company Here*</p>
         <div className="flex space-x-2 my-2">
           {/* tech stack */}

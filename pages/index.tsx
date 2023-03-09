@@ -51,7 +51,7 @@ type Props = {
       </section>
       {/* Experience */}
       <section id="experience" className="snap-center scroll-smooth">
-        <WorkExperience />
+        <WorkExperience experience={experience}/>
       </section>
 
       {/* Skills */}

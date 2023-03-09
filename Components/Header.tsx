@@ -10,7 +10,7 @@ type Props = {
 
 function Header({socials}: Props) {
 
-  console.log(socials)
+
   return (
     <header className="sticky top-0 flex items-start justify-between p-5 max-w-7xl mx-auto z-40 xl: center">
       {/* Left side  */}
