@@ -16,7 +16,7 @@ type Props = {
 };
 
 function ExperienceCard({experience}: Props) {
-  console.log(experience)
+  console.log('experiencCard',experience)
   return (
     <article
       className="flex flex-col rounded-lg items-center space-y-7
@@ -50,10 +50,30 @@ function ExperienceCard({experience}: Props) {
       {/* DETAILS */}
       <div className="px- md:p-10">
         <h4 className="text-4xl font-light ">{experience.role}</h4>
-        <p className="font-bold text-2xl mt-1">*Company Here*</p>
+        <p className="font-bold text-2xl mt-1">{experience.company}</p>
         <div className="flex space-x-2 my-2">
           {/* tech stack */}
-          <Image
+          {/* map and use a ternary to check to see if there is tech else render null */}
+          {/* {experience.technology &&
+          // map over tech to render images
+          experience.technology.map((tech)=>(
+            // console.log('tech',tech)
+            <Image
+            src={ImgURLs.fullstack}
+            width={100}
+            height={100}
+            alt=""
+            key={tech._id}
+            className="w-10 h-10 rounded-full"
+          />
+
+          )) :(null)
+
+        } */}
+
+
+
+          {/* <Image
             src={ImgURLs.jslogo}
             width={100}
             height={100}
@@ -87,7 +107,7 @@ function ExperienceCard({experience}: Props) {
             alt=""
             height={100}
             className="w-10 h-10 rounded-full"
-          />
+          /> */}
         </div>
         <p className="uppercase py-5 text-gray-300">Started... Ended...</p>
           {/* to make ui scrollable. set a height and set 'scrollable' */}

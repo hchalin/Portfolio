@@ -21,6 +21,7 @@ function WorkExperience({ experience }: Props) {
 
       <div className="flex w-full space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#474790]/80">
         {experience.map((experience) => (
+          // console.log('here',experience)
           <ExperienceCard experience={experience}
           key={experience._id}
           />
