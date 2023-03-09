@@ -13,11 +13,12 @@ export const config = {
   apiVersion: "2023-03-03",
   useCdn: process.env.NODE_ENV === 'production',
 };
-console.log (config)
+
 
 export const sanityClient = createClient(config);
 
 //This will turn images into sanity urls for photos
 export const urlFor = (source: any )=> {
-  createImageUrlBuilder(config).image(source)
+ return  createImageUrlBuilder(config).image(source)
 }
+

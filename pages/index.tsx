@@ -28,7 +28,7 @@ type Props = {
 
  export default function Home({pageInfo, experience,skills,projects,socials}: Props) {
 
-  console.log(pageInfo)
+
 
 
   return (
@@ -39,10 +39,10 @@ type Props = {
       </Head>
 
       {/* Header  */}
-      <Header />
+      <Header socials={socials} />
       {/* snap-...(start, center, end) sets 'snap anchor points' */}
       <section id="hero" className="snap-start scoll-smooth">
-        <Hero />
+        <Hero pageInfo={pageInfo}/>
       </section>
 
       {/* About */}
@@ -99,6 +99,10 @@ export const getStaticProps:GetStaticProps<Props>  = async (params:type) => {
       skills,
       socials,
       projects
-    }
+    },
+    // Next.js will attempt to re-generate the page:
+    // - when a request comes in
+    // - at most every 5000 seconds
+    revalidate: 5000,
   }
 }
