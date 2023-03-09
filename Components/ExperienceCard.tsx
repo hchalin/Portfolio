@@ -12,11 +12,10 @@ const ImgURLs = {
 };
 
 type Props = {
-  experience: Experience[];
+  experience: Experience;
 };
 
-function ExperienceCard({experience}: Props) {
-  console.log('experiencCard',experience)
+function ExperienceCard({ experience }: Props) {
   return (
     <article
       className="flex flex-col rounded-lg items-center space-y-7
@@ -41,7 +40,6 @@ function ExperienceCard({experience}: Props) {
           width={100}
           height={100}
           alt=""
-
           className="rounded-full"
         />
       </motion.div>
@@ -54,63 +52,33 @@ function ExperienceCard({experience}: Props) {
         <div className="flex space-x-2 my-2">
           {/* tech stack */}
           {/* map and use a ternary to check to see if there is tech else render null */}
-          {/* {experience.technology &&
-          // map over tech to render images
-          experience.technology.map((tech)=>(
-            // console.log('tech',tech)
-            <Image
-            src={ImgURLs.fullstack}
-            width={100}
-            height={100}
-            alt=""
-            key={tech._id}
-            className="w-10 h-10 rounded-full"
-          />
+          {console.log("experiencCard", experience)}
+          {/* console.log(experience.technologies); */}
 
-          )) :(null)
+          {/* this was a freaking pain......... */}
+          {experience.technology && experience.technology.length > 0
+            ? experience.technology.map((tech) => {
+                if (tech && tech.image) {
+                  const imageUrl = urlFor(tech.image).url();
+                  console.log("======", tech);
+                  return (
+                    <Image
+                      src={imageUrl}
+                      key={tech._id}
+                      width={150}
+                      height={150}
+                      alt=""
+                      className="w-12 h-12 rounded-full"
+                    />
+                  );
+                }
+                return null;
+              })
+            : null}
 
-        } */}
-
-
-
-          {/* <Image
-            src={ImgURLs.jslogo}
-            width={100}
-            height={100}
-            alt=""
-            className="w-10 h-10 rounded-full"
-          />
-          <Image
-            src={ImgURLs.jslogo}
-            width={100}
-            height={100}
-            alt=""
-            className="w-10 h-10 rounded-full"
-          />
-          <Image
-            src={ImgURLs.jslogo}
-            width={100}
-            alt=""
-            height={100}
-            className="w-10 h-10 rounded-full"
-          />
-          <Image
-            src={ImgURLs.jslogo}
-            width={100}
-            alt=""
-            height={100}
-            className="w-10 h-10 rounded-full"
-          />
-          <Image
-            src={ImgURLs.jslogo}
-            width={100}
-            alt=""
-            height={100}
-            className="w-10 h-10 rounded-full"
-          /> */}
         </div>
         <p className="uppercase py-5 text-gray-300">Started... Ended...</p>
-          {/* to make ui scrollable. set a height and set 'scrollable' */}
+        {/* to make ui scrollable. set a height and set 'scrollable' */}
         <ul className="list-disc space-y-4 text-lg ">
           <li>Summary Points</li>
           <li>Summary Pointsa</li>
