@@ -15,6 +15,7 @@ const nextConfig = {
       "img.icons8.com",
       "cdn2.iconfinder.com",
       "cdn.iconscout.com",
+      "cdn.sanity.io",
     ],
   },
 };

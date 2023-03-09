@@ -6,9 +6,13 @@ import { Cursor, Typewriter, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
 import Head from "next/head";
 import Link from "next/link";
-type Props = {};
+import { PageInfo } from "@/typings";
+import { urlFor } from "@/sanity";
+type Props = {
+  pageInfo: PageInfo
+};
 
-function Hero({}: Props) {
+function Hero({pageInfo}: Props) {
   const [text, count] = useTypewriter({
     words: [
       "Hi, I'm Hayden ",
@@ -20,18 +24,22 @@ function Hero({}: Props) {
     delaySpeed: 2000,
   });
 
+
+
   return (
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <BackgroundCircles />
       <Image
-        src={Headshot}
+        width={'128'}
+        height={'128'}
+        src={urlFor(pageInfo?.heroImage).url()}
         // Object-cover keeps the img from distorting if its large
         className="relative rounded-full h-32 w-32 mx-auto object-cover"
         alt=""
       />
       <div className="z-20">
         <h2 className="text-small uppercase text-gray-500 pb-2 tracking-[15px]">
-          Software Engineer
+          {pageInfo.role}
         </h2>
         <h1 className="text-5xl lg:text-6xl font-simibold px-10">
           <span className="mr-3">{text}</span>
