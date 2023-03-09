@@ -2,10 +2,13 @@ import React, { lazy } from "react";
 import Headshot from "../imgs/blkwhtportrait.jpg";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { PageInfo } from "@/typings";
 
-type Props = {};
-
-function About({}: Props) {
+type Props = {
+  pageInfo: PageInfo
+};
+function About({pageInfo}: Props) {
+  console.log(pageInfo)
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -58,7 +61,8 @@ function About({}: Props) {
           transition={{ duration: 1.2 }}
           className="text-base  h-[430px]  overflow-scroll"
         >
-          My name is Hayden, and I am a Full Stack Software Engineer with
+          {pageInfo.backgroundInfo}
+          {/* My name is Hayden, and I am a Full Stack Software Engineer with
           a passion for using technology to solve real-world problems.
           <br />
           <br />
@@ -79,7 +83,7 @@ function About({}: Props) {
           <br />
           <br />
           I am passionate about using my skills and expertise to develop
-          high-quality software applications that improve the lives of those who use them.
+          high-quality software applications that improve the lives of those who use them. */}
         </motion.p>
       </div>
     </motion.div>

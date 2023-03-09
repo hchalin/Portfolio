@@ -47,7 +47,7 @@ type Props = {
 
       {/* About */}
       <section id="about" className="snap-center scroll-smooth">
-        <About />
+        <About pageInfo={pageInfo}/>
       </section>
       {/* Experience */}
       <section id="experience" className="snap-center scroll-smooth">
