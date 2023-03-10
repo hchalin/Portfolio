@@ -10,6 +10,6 @@ export const fetchSocials =async () => {
 
     return socials;
   } catch (err) {
-      console.log('An error occured while fetching socials', socials)
+      // console.log('An error occured while fetching socials', err)
   }
 }

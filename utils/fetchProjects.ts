@@ -10,6 +10,6 @@ export const fetchProjects =async () => {
 
     return projects;
   } catch (err) {
-    console.log('An error occured while fetching projects',projects)
+    console.log('An error occured while fetching projects',err)
   }
 }

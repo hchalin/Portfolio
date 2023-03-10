@@ -10,6 +10,6 @@ export const fetchPageInfo =async () => {
 
     return pageInfo;
   } catch (err) {
-    console.log('An error occured while fetching pageInfo',pageInfo)
+    console.log('An error occured while fetching pageInfo', err)
   }
 }

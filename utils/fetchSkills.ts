@@ -10,6 +10,6 @@ export const fetchSkills =async () => {
 
   return skills;
   } catch (err){
-    console.log('An error occured while fetching skills', skills)
+    console.log('An error occured while fetching skills', err)
   }
 }

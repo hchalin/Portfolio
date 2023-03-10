@@ -10,6 +10,6 @@ export const fetchExperience =async () => {
 
     return experience;
   } catch (err) {
-    console.log('An error occured while fetching experience',experience)
+    console.log('An error occured while fetching experience',err)
   }
 }
