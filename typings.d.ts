@@ -49,6 +49,7 @@ export interface Experience extends SanityBody {
   company: string
   companyImg: Image
   startDate: string
+  role: string
   endDate: string
   isCurrenlyWorkingHere: boolean
   // or role
