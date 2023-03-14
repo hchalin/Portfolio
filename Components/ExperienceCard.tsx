@@ -77,13 +77,17 @@ function ExperienceCard({ experience }: Props) {
             : null}
 
         </div>
-        <p className="uppercase py-5 text-gray-300">Started... Ended...</p>
+        <p className="uppercase py-5 text-gray-300">{experience.startDate} -  {experience.endDate}</p>
         {/* to make ui scrollable. set a height and set 'scrollable' */}
         <ul className="list-disc space-y-4 text-lg ">
+          {/* Map over summary points */}
+          {experience.summaryPoints.map((point)=>(
+            <li key={experience._id}>{point}</li>
+
+          ))}
+          {/* <li>Summary Points</li>
           <li>Summary Points</li>
-          <li>Summary Pointsa</li>
-          <li>Summary Points</li>
-          <li>Summary Points</li>
+          <li>Summary Points</li> */}
         </ul>
       </div>
     </article>
