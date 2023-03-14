@@ -39,7 +39,7 @@ function SkillComponent({ directionLeft, skill }: Props) {
           x: 0,
         }}
       >
-        {console.log(skill, "============")}
+
         <Image
           src={urlFor(skill.image).url()}
           width={96} // = w-24

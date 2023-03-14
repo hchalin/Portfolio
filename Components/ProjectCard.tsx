@@ -1,10 +1,11 @@
 import React from "react";
 import { SocialIcon } from "react-social-icons";
 type Props = {
-  index: number
+  index: number;
+  project: {};
 };
 
-function ProjectCard({ index }: Props) {
+function ProjectCard({ project, index }: Props) {
   return (
     <article>
       <div
@@ -12,7 +13,7 @@ function ProjectCard({ index }: Props) {
       overflow-x-scroll snap-mandatory flex flex-col space-y-5 h-[500px] xl:h-[500px] bg-[#292929] opacity-40 hover:opacity-100 transition-opacity duration-300  p-20 rounded-xl"
       >
         <SocialIcon
-          url="https://github.com/hchalin/react-weather-app"
+          url={project.linkToBuild}
           fgColor="grey"
           target="_blank" //opens in new tab
           bgColor="transparent"
@@ -24,11 +25,13 @@ function ProjectCard({ index }: Props) {
         <div className="space-y-10 px-0 md:px-10 max-1-6xl">
           <h4 className="text-4xl font-semibold text-center">
             <span className="underline decoration-[#474790]">
-              Case {index + 1} of 3:
-            </span>{" "}
-            React weather App
+              Case {index + 1} :
+            </span><span> </span>
+            {project.title}
           </h4>
-          <p className="text-large text-center md:text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex sapiente nobis esse dignissimos quasi et nesciunt corrupti explicabo ducimus? Eius officiis esse natus provident aperiam debitis, voluptatem mollitia vitae saepe.</p>
+          <p className="text-large text-center md:text-left">
+            {project.summary}
+          </p>
         </div>
       </div>
     </article>

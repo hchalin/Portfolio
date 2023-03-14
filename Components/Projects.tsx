@@ -40,7 +40,8 @@ function Projects({projects}: Props) {
           //  project card
           <div key={uniqueKey}
           >
-            <ProjectCard index={index}  />
+            {console.log(project)}
+            <ProjectCard index={index} project={project} />
           </div>
         ))}
       </div>
