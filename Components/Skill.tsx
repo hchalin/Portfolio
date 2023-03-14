@@ -2,9 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
+import { urlFor } from "@/sanity";
 
 type Props = {
   directionLeft?: boolean;
+  skill: skill;
 };
 /**
  * NOTE
@@ -19,8 +21,8 @@ const langPics = {
     "https://cdn2.iconfinder.com/data/icons/well-known-1/1024/Visual_Studio-256.png", //testing
 };
 
-function Skill({ directionLeft }: Props) {
-// not needed right now
+function Skill({ directionLeft, skill }: Props) {
+  // not needed right now
   return (
     <div className="group relative flex cursor-pointer">
       <motion.div
@@ -37,9 +39,9 @@ function Skill({ directionLeft }: Props) {
           x: 0,
         }}
       >
-
+        {console.log(skill, "============")}
         <Image
-          src={langPics.js}
+          src={urlFor(skill.image).url()}
           width={96} // = w-24
           height={96} //= h-24
           alt="Language Icon" // h-24 and w-24 is not necessary
@@ -55,7 +57,9 @@ function Skill({ directionLeft }: Props) {
         xl:h-32 xl:w-32 rounded-full z-0"
       >
         <div className="flex items-center justify-center h-full  ">
-          <p className="text-3xl font-bold text-black opacity-100">100%</p>
+          <p className="text-3xl font-bold text-black opacity-100">
+            {skill.progress}
+          </p>
         </div>
       </div>
     </div>

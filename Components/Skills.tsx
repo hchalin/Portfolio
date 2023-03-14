@@ -1,9 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Skill from "./Skill";
-type Props = {};
+type Props = {
+  skills: skills[]
+};
 
-function Skills({}: Props) {
+function Skills({skills}: Props) {
   return <motion.div
   initial={{opacity: 0}}
   whileInView={{opacity: 1}}
@@ -15,19 +17,12 @@ function Skills({}: Props) {
       <h3 className="absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm">Hover over a skill for current profieciency</h3>
 
       <div className="grid grid-cols-4 gap-5 ">
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
+        {skills.map((skill)=>(
+        // {console.log(skill)}
+          <Skill key={skill._id} skill={skill}/>
+
+        ))}
+
 
       </div>
 
