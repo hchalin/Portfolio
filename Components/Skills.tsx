@@ -1,8 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Skill from "./Skill";
+import SkillComponent from "./SkillComponent";
+import { Skill } from "@/typings";
 type Props = {
-  skills: skills[]
+  skills: Skill[]
 };
 
 function Skills({skills}: Props) {
@@ -19,7 +20,7 @@ function Skills({skills}: Props) {
       <div className="grid grid-cols-4 gap-5 ">
         {skills.map((skill)=>(
         // {console.log(skill)}
-          <Skill key={skill._id} skill={skill}/>
+          <SkillComponent key={skill._id} skill={skill}/>
 
         ))}
 

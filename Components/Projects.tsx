@@ -4,12 +4,15 @@ import { v4 as uuidv4 } from "uuid";
 import { motion } from "framer-motion";
 
 import ProjectCard from "./ProjectCard";
+import { Project } from "@/typings";
 
-type Props = {};
+type Props = {
+  projects: Project[]
+};
 
-function Projects({}: Props) {
+function Projects({projects}: Props) {
   // fetch the projects from sanity
-  const projects = [1, 2, 3];
+  // const projects = [1, 2, 3];
   const uniqueKey = uuidv4();
 
   return (

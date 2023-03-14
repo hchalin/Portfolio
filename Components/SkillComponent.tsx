@@ -21,7 +21,7 @@ const langPics = {
     "https://cdn2.iconfinder.com/data/icons/well-known-1/1024/Visual_Studio-256.png", //testing
 };
 
-function Skill({ directionLeft, skill }: Props) {
+function SkillComponent({ directionLeft, skill }: Props) {
   // not needed right now
   return (
     <div className="group relative flex cursor-pointer">
@@ -66,4 +66,4 @@ function Skill({ directionLeft, skill }: Props) {
   );
 }
 
-export default Skill;
+export default SkillComponent;

@@ -61,7 +61,7 @@ type Props = {
 
       {/* Projects */}
       <section id="projects" className="snap-start scroll-smooth">
-        <Projects />
+        <Projects projects={projects}/>
       </section>
 
       {/* Contact Me */}

@@ -52,7 +52,7 @@ function ExperienceCard({ experience }: Props) {
         <div className="flex space-x-2 my-2">
           {/* tech stack */}
           {/* map and use a ternary to check to see if there is tech else render null */}
-          {console.log("experiencCard", experience)}
+
           {/* console.log(experience.technologies); */}
 
           {/* this was a freaking pain......... */}
@@ -60,7 +60,7 @@ function ExperienceCard({ experience }: Props) {
             ? experience.technology.map((tech) => {
                 if (tech && tech.image) {
                   const imageUrl = urlFor(tech.image).url();
-                  console.log("======", tech);
+
                   return (
                     <Image
                       src={imageUrl}
@@ -75,15 +75,15 @@ function ExperienceCard({ experience }: Props) {
                 return null;
               })
             : null}
-
         </div>
-        <p className="uppercase py-5 text-gray-300">{experience.startDate} -  {experience.endDate}</p>
+        <p className="uppercase py-5 text-gray-300">
+          {experience.startDate} - {experience.endDate}
+        </p>
         {/* to make ui scrollable. set a height and set 'scrollable' */}
         <ul className="list-disc space-y-4 text-lg ">
           {/* Map over summary points */}
-          {experience.summaryPoints.map((point)=>(
+          {experience.summaryPoints.map((point) => (
             <li key={experience._id}>{point}</li>
-
           ))}
           {/* <li>Summary Points</li>
           <li>Summary Points</li>
