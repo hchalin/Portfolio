@@ -3,10 +3,11 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { urlFor } from "@/sanity";
+import { Skill } from "@/typings";
 
 type Props = {
   directionLeft?: boolean;
-  // skill: skill;
+  skill: Skill
 };
 /**
  * NOTE
