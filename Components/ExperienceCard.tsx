@@ -47,43 +47,44 @@ function ExperienceCard({ experience }: Props) {
 
       {/* DETAILS */}
       <div className="px-auto md:p-10">
-        {console.log(experience)}
-        <h4 className="text-4xl font-light ">{experience.role}</h4>
-        <p className="font-bold text-2xl mt-1">{experience.company}</p>
-        <div className="flex space-x-2 my-2">
-          {experience.technology && experience.technology.length > 0
-            ? experience.technology.map((tech) => {
-                if (tech && tech.image) {
-                  const imageUrl = urlFor(tech.image).url();
+        <>
+          <h4 className="text-4xl font-light ">{experience.role}</h4>
+          <p className="font-bold text-2xl mt-1">{experience.company}</p>
+          <div className="flex space-x-2 my-2">
+            {experience.technology && experience.technology.length > 0
+              ? experience.technology.map((tech) => {
+                  if (tech && tech.image) {
+                    const imageUrl = urlFor(tech.image).url();
 
-                  return (
-                    <Image
-                      src={imageUrl}
-                      key={tech._id}
-                      width={150}
-                      height={150}
-                      alt=""
-                      className="w-12 h-12 rounded-full"
-                    />
-                  );
-                }
-                return null;
-              })
-            : null}
-        </div>
-        <p className="uppercase py-5 text-gray-300">
-          {experience.startDate} - {experience.endDate}
-        </p>
-        {/* to make ui scrollable. set a height and set 'scrollable' */}
-        <ul className="list-disc space-y-4 text-lg ">
-          {/* Map over summary points */}
-          {experience.summaryPoints.map((point) => (
-            <li key={experience._id}>{point}</li>
-          ))}
-          {/* <li>Summary Points</li>
+                    return (
+                      <Image
+                        src={imageUrl}
+                        key={tech._id}
+                        width={150}
+                        height={150}
+                        alt=""
+                        className="w-12 h-12 rounded-full"
+                      />
+                    );
+                  }
+                  return null;
+                })
+              : null}
+          </div>
+          <p className="uppercase py-5 text-gray-300">
+            {experience.startDate} - {experience.endDate}
+          </p>
+          {/* to make ui scrollable. set a height and set 'scrollable' */}
+          <ul className="list-disc space-y-4 text-lg ">
+            {/* Map over summary points */}
+            {experience.summaryPoints.map((point) => (
+              <li key={experience._id}>{point}</li>
+            ))}
+            {/* <li>Summary Points</li>
           <li>Summary Points</li>
           <li>Summary Points</li> */}
-        </ul>
+          </ul>
+        </>
       </div>
     </article>
   );
