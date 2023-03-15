@@ -46,17 +46,11 @@ function ExperienceCard({ experience }: Props) {
       {/* ===== END OF IMAGE */}
 
       {/* DETAILS */}
-      <div className="px- md:p-10">
+      <div className="px-auto md:p-10">
         {console.log(experience)}
         <h4 className="text-4xl font-light ">{experience.role}</h4>
         <p className="font-bold text-2xl mt-1">{experience.company}</p>
         <div className="flex space-x-2 my-2">
-          {/* tech stack */}
-          {/* map and use a ternary to check to see if there is tech else render null */}
-
-          {/* console.log(experience.technologies); */}
-
-          {/* this was a freaking pain......... */}
           {experience.technology && experience.technology.length > 0
             ? experience.technology.map((tech) => {
                 if (tech && tech.image) {
