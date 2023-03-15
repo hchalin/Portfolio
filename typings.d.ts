@@ -36,26 +36,26 @@ export interface Skill extends SanityBody {
 }
 
 export interface Project extends SanityBody {
-  title: string
-  _type: 'project'
-  image: Image
-  summary: string
+  title: string;
+  _type: "project";
+  image: Image;
+  summary: string;
   // this may have to be Skill[]
-  technologies: Technology[]
+  technologies: Technology[];
 }
 
 export interface Experience extends SanityBody {
-  _type: 'experience'
-  company: string
-  companyImg: Image
-  startDate: string
-  role: string
-  endDate: string
-  isCurrenlyWorkingHere: boolean
+  _type: "experience";
+  company: string;
+  companyImg: Image;
+  startDate: string;
+  role: string;
+  endDate: string;
+  isCurrenlyWorkingHere: boolean;
   // or role
-  jobTitle: string
-  summaryPoints: string[]
-  technologies: Skill[]
+  jobTitle: string;
+  summaryPoints: string[];
+  technologies: Skill[];
 }
 
 export interface Social extends SanityBody {
