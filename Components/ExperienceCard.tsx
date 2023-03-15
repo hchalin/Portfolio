@@ -47,6 +47,7 @@ function ExperienceCard({ experience }: Props) {
 
       {/* DETAILS */}
       <div className="px- md:p-10">
+        {console.log(experience)}
         <h4 className="text-4xl font-light ">{experience.role}</h4>
         <p className="font-bold text-2xl mt-1">{experience.company}</p>
         <div className="flex space-x-2 my-2">
