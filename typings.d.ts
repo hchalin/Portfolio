@@ -53,7 +53,7 @@ export interface Experience extends SanityBody {
   endDate: string;
   isCurrenlyWorkingHere: boolean;
   summaryPoints: string[];
-  technologies: Skill[];
+  technology: Skill[];
 }
 
 export interface Social extends SanityBody {
