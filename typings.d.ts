@@ -40,6 +40,7 @@ export interface Project extends SanityBody {
   _type: "project";
   image: Image;
   summary: string;
+  linkToBuild: string
   // this may have to be Skill[]
   technologies: Technology[];
 }
