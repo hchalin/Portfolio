@@ -6,7 +6,7 @@ import { urlFor } from "@/sanity";
 
 type Props = {
   directionLeft?: boolean;
-  skill: skill;
+  // skill: skill;
 };
 /**
  * NOTE

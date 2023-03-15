@@ -2,9 +2,10 @@ import React from "react";
 import { SocialIcon } from "react-social-icons";
 import Image from "next/image";
 import { urlFor } from "@/sanity";
+import { Project } from "@/typings";
 type Props = {
   index: number;
-  project: {};
+  project: Project;
 };
 
 function ProjectCard({ project, index }: Props) {
