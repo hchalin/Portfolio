@@ -95,17 +95,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
   // Provide a default value for pageInfo in case it's undefined
   const props: Props = {
-    pageInfo: pageInfo || {
-      _type: "pageInfo",
-      address: "",
-      backgroundInfo: "",
-      email: "",
-      role: "",
-      heroImage: { _type: "image", asset: { _ref: "" } },
-      name: "",
-      phoneNumber: "",
-      profilePic: { _type: "image", asset: { _ref: "" } },
-    },
+    pageInfo,
     experience,
     skills,
     socials,
