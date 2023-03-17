@@ -88,10 +88,10 @@ export default function Home({
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const pageInfo: PageInfo | undefined = await fetchPageInfo();
-  const experience: Experience[] = await fetchExperience();
-  const skills: Skill[] = await fetchSkills();
-  const socials: Social[] = await fetchSocials();
-  const projects: Project[] = await fetchProjects();
+  const experience: Experience[] | undefined = await fetchExperience();
+  const skills: Skill[] | undefined = await fetchSkills();
+  const socials: Social[] | undefined = await fetchSocials();
+  const projects: Project[] | undefined = await fetchProjects();
 
   // Provide a default value for pageInfo in case it's undefined
   const props: Props = {
