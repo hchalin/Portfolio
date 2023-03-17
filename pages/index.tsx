@@ -84,7 +84,7 @@ type Props = {
   );
 }
 
-export const getStaticProps:GetStaticProps<Props>  = async (params:type) => {
+ export const getStaticProps:GetStaticProps<Props>  = async () => {
   const pageInfo: PageInfo = await fetchPageInfo()
   const experience: Experience[] = await fetchExperience()
   const skills: Skill[] = await fetchSkills()
@@ -103,6 +103,6 @@ export const getStaticProps:GetStaticProps<Props>  = async (params:type) => {
     // Next.js will attempt to re-generate the page:
     // - when a request comes in
     // - at most every 5000 seconds
-    revalidate: 5000,
+    revalidate: 60,
   }
 }
