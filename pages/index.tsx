@@ -9,7 +9,7 @@ import Projects from "@/Components/Projects";
 import ContactMe from "@/Components/ContactMe";
 import getSocials from "./api/getSocials";
 import Link from "next/link";
-import Headshot from '../imgs/blkwhtportrait.jpg'
+import Headshot from "../imgs/blkwhtportrait.jpg";
 import { GetStaticProps } from "next";
 import { Experience, PageInfo, Project, Skill, Social } from "@/typings";
 import { fetchPageInfo } from "@/utils/fetchPageInfo";
@@ -23,14 +23,16 @@ type Props = {
   experience: Experience[];
   skills: Skill[];
   projects: Project[];
-  socials: Social[]
-}
+  socials: Social[];
+};
 
- export default function Home({pageInfo, experience,skills,projects,socials}: Props) {
-
-
-
-
+export default function Home({
+  pageInfo,
+  experience,
+  skills,
+  projects,
+  socials,
+}: Props) {
   return (
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-manditory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#474790]/80">
       <Head>
@@ -42,41 +44,41 @@ type Props = {
       <Header socials={socials} />
       {/* snap-...(start, center, end) sets 'snap anchor points' */}
       <section id="hero" className="snap-start scoll-smooth">
-        <Hero pageInfo={pageInfo}/>
+        <Hero pageInfo={pageInfo} />
       </section>
 
       {/* About */}
       <section id="about" className="snap-center scroll-smooth">
-        <About pageInfo={pageInfo}/>
+        <About pageInfo={pageInfo} />
       </section>
       {/* Experience */}
       <section id="experience" className="snap-center scroll-smooth">
-        <WorkExperience experience={experience}/>
+        <WorkExperience experience={experience} />
       </section>
 
       {/* Skills */}
       <section id="skills" className="snap-start scroll-smooth">
-        <Skills skills={skills}/>
+        <Skills skills={skills} />
       </section>
 
       {/* Projects */}
       <section id="projects" className="snap-start scroll-smooth">
-        <Projects projects={projects}/>
+        <Projects projects={projects} />
       </section>
 
       {/* Contact Me */}
       <section id="contact" className="snap-start scroll-smooth">
         <ContactMe />
       </section>
-      <Link href='#hero'>
+      <Link href="#hero">
         <footer className="sticky bottom-5 w-full cursor-pointer">
           <div className="flex items-center justify-center">
-          <Image
-        src={Headshot}
-        // Object-cover keeps the img from distorting if its large
-        className="relative rounded-full h-10 w-10 mx-auto object-cover"
-        alt=""
-      />
+            <Image
+              src={Headshot}
+              // Object-cover keeps the img from distorting if its large
+              className="relative rounded-full h-10 w-10 mx-auto object-cover"
+              alt=""
+            />
           </div>
         </footer>
       </Link>
@@ -84,25 +86,31 @@ type Props = {
   );
 }
 
- export const getStaticProps:GetStaticProps<Props>  = async () => {
-  const pageInfo: PageInfo = await fetchPageInfo()
-  const experience: Experience[] = await fetchExperience()
-  const skills: Skill[] = await fetchSkills()
-  const socials: Social[] = await fetchSocials()
-  const projects: Project[] = await fetchProjects()
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const pageInfo: PageInfo | undefined = await fetchPageInfo();
+  const experience: Experience[] = await fetchExperience();
+  const skills: Skill[] = await fetchSkills();
+  const socials: Social[] = await fetchSocials();
+  const projects: Project[] = await fetchProjects();
 
-
-  return {
-    props: {
-      pageInfo,
-      experience,
-      skills,
-      socials,
-      projects
+  // Provide a default value for pageInfo in case it's undefined
+  const props: Props = {
+    pageInfo: pageInfo || {
+      _type: "pageInfo",
+      address: "",
+      backgroundInfo: "",
+      email: "",
+      role: "",
+      heroImage: { _type: "image", asset: { _ref: "" } },
+      name: "",
+      phoneNumber: "",
+      profilePic: { _type: "image", asset: { _ref: "" } },
     },
-    // Next.js will attempt to re-generate the page:
-    // - when a request comes in
-    // - at most every 5000 seconds
-    revalidate: 60,
-  }
-}
+    experience,
+    skills,
+    socials,
+    projects,
+  };
+
+  return { props, revalidate: 60 };
+};
