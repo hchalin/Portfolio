@@ -24,7 +24,6 @@ function Hero({pageInfo}: Props) {
     delaySpeed: 2000,
   });
 
-  console.log(pageInfo.name, '')
 
 
 
