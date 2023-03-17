@@ -87,20 +87,23 @@ export default function Home({
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const pageInfo: PageInfo | undefined = await fetchPageInfo();
-  const experience: Experience[] | undefined = await fetchExperience();
-  const skills: Skill[] | undefined = await fetchSkills();
-  const socials: Social[] | undefined = await fetchSocials();
-  const projects: Project[] | undefined = await fetchProjects();
+  const pageInfo: PageInfo = await fetchPageInfo();
+  const experience: Experience[] = await fetchExperience();
+  const skills: Skill[] = await fetchSkills();
+  const socials: Social[] = await fetchSocials();
+  const projects: Project[] = await fetchProjects();
 
-  // Provide a default value for pageInfo in case it's undefined
-  const props: Props = {
-    pageInfo,
-    experience,
-    skills,
-    socials,
-    projects,
+  return {
+    props: {
+      pageInfo,
+      experience,
+      skills,
+      socials,
+      projects,
+    },
+    // Next.js will attempt to re-generate the page:
+    // - when a request comes in
+    // - at most every 5000 seconds
+    revalidate: 60,
   };
-
-  return { props, revalidate: 60 };
 };
