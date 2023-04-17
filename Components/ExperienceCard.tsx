@@ -19,7 +19,7 @@ function ExperienceCard({ experience }: Props) {
   return (
     <article
       className="flex flex-col rounded-lg items-center space-y-7
-    flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] xl:max-h-[650px] snap-center
+    flex-shrink-0 w-[500px] md:w-[600px] md:h-[700px] xl:w-[900px] xl:max-h-[650px] snap-center
     bg-[#292929] p-10 opacity-40 hover:opacity-100 cursor-pointer
     transition-opacity duration-300 overflow-hidden"
     >
