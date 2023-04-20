@@ -22,7 +22,7 @@ function ContactMe({}: Props) {
     )}&su=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
       `Hi, my name is ${formData.name}. ${formData.message}`
     )}`;
-    window.open(gmailLink, '_blank')
+    window.open(gmailLink, "_blank");
   };
 
   return (
