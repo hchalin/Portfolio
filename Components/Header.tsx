@@ -43,14 +43,14 @@ function Header({ socials }: Props) {
             bgColor="transparent"
           />
         ))}
-        <Link href="/photography">
+        <Link href="https://unsplash.com/@hchalin" target="_blank">
           <Image
             src={unsplashIcon}
             alt="My Photos"
             width={23} // = w-24
             height={23} //= h-24
             className="m-3"
-            target="_blank"
+
           />
         </Link>
       </motion.div>
