@@ -38,4 +38,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 
-here is some new text from the new mac
+## UPDATES
+
+9/7/2020
+- added raging sea project to database
